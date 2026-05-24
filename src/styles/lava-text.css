@@ -6,11 +6,11 @@
   .lava-text {
     color: transparent;
     background:
-      radial-gradient(circle at 18% 32%, #facc15 0 10%, transparent 24%),
+      radial-gradient(circle at 18% 32%, #bef264 0 10%, transparent 24%),
       radial-gradient(circle at 72% 24%, #84cc16 0 12%, transparent 28%),
       radial-gradient(circle at 42% 76%, #22c55e 0 14%, transparent 30%),
       radial-gradient(circle at 86% 78%, #d9f99d 0 10%, transparent 24%),
-      linear-gradient(120deg, #fef08a, #a3e635 38%, #22c55e 68%, #facc15);
+      linear-gradient(120deg, #bbf7d0, #a3e635 38%, #22c55e 68%, #65a30d);
     background-size: 220% 220%, 190% 190%, 240% 240%, 210% 210%, 180% 180%;
     background-position: 0% 40%, 100% 20%, 40% 100%, 90% 80%, 0% 50%;
     -webkit-background-clip: text;
