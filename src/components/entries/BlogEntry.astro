@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  url: string;
+  title: string;
+  description: string;
+  author: string;
+  pubDate: Date;
+  image: ImageMetadata;
+  alt: string;
+}
+
+const { url, title, description, author, pubDate, image, alt } = Astro.props;
+const displayDate = pubDate.toLocaleDateString("en", {
+  weekday: "short",
+  month: "short",
+  day: "2-digit",
+});
+---
+
+<article class="flex flex-col flex-1 h-full">
+  <a href={url} title={title} class="group block">
+    <div class="block w-full lg:col-span-2">
+      <Image src={image} alt={alt} width={1200} height={800} class="object-cover w-full h-full bg-center aspect-12/8 rounded-md" />
+    </div>
+  </a>
+  <div class="mt-1">
+    <div class="flex items-center space-x-1 text-xs text-base-500">
+      <span class="font-medium">{author}</span>
+      <span aria-hidden="true">·</span>
+      <time datetime={pubDate.toISOString()}>{displayDate}</time>
+    </div>
+    <h2 class="mt-4 text-base text-base-900 text-balance">
+      <a href={url} class="hover:underline">{title}</a>
+    </h2>
+    <p class="mt-1 text-sm text-base-500 line-clamp-2">{description}</p>
+  </div>
+</article>

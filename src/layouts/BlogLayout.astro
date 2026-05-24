@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const { frontmatter } = Astro.props;
+const displayDate = frontmatter.pubDate.toLocaleDateString("en", {
+  weekday: "short",
+  month: "short",
+  day: "2-digit",
+});
+---
+
+<BaseLayout title={`${frontmatter.title} | NUVOLIC (a blog)`} description={frontmatter.description}>
+  <section>
+    <div class="py-24">
+      <div class="lg:text-center">
+        <div class="max-w-xl mx-auto">
+          <h1 class="text-4xl text-balance font-medium font-display text-base-900">{frontmatter.title}</h1>
+          <p class="max-w-2xl mx-auto mt-4 text-base-500 text-sm text-balance">
+            <em>{frontmatter.description}</em>
+          </p>
+        </div>
+        <Image
+          src={frontmatter.image.url}
+          alt={frontmatter.image.alt}
+          width={1280}
+          height={720}
+          class="object-cover object-center w-full aspect-12/7 rounded-md mt-4"
+        />
+        <div class="flex flex-col justify-between mt-4 md:flex-row gap-3">
+          <p class="text-xs text-base-500">{displayDate} - Written by: {frontmatter.author}</p>
+          <div class="flex gap-3">
+            {
+              frontmatter.tags.map((tag) => (
+                <a href={`/tags/${tag}`} class="text-xs font-medium text-base-500 hover:text-base-900">{tag}</a>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+      <div class="prose prose-sm max-w-md mt-12 mx-auto prose-a:text-blue-700 prose-pre:rounded-sm">
+        <slot />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,29 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import Footer from "@/components/global/Footer.astro";
+import Navigation from "@/components/global/Navigation.astro";
+import "@/styles/global.css";
+
+interface Props {
+    title?: string;
+    description?: string;
+}
+
+const { title = "NUVOLIC (a blog)", description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead title={title} description={description} />
+    </head>
+    <body
+        class="flex flex-col max-w-3xl min-h-screen px-8 mx-auto bg-white text-base-900"
+    >
+        <Navigation />
+        <main class="grow">
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>

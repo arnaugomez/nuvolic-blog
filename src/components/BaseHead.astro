@@ -1,0 +1,31 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "NUVOLIC (a blog)",
+  description = "A small journal about clear systems, thoughtful tools, and quieter software.",
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site || "https://nuvolic.blog");
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="NUVOLIC (a blog)" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@100..800&display=swap"
+  rel="stylesheet"
+/>
