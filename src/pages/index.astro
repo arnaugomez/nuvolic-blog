@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogEntry from "@/components/entries/BlogEntry.astro";
+import LavaText from "@/components/LavaText.astro";
 import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("posts");
@@ -19,7 +20,7 @@ const sortedPosts = allPosts.sort(
             <h1
                 class="text-4xl text-balance font-medium font-display text-base-900 max-w-xl"
             >
-                Nuvolic is a blog by Arnau Gómez
+                <LavaText>Nuvolic</LavaText> is a blog by Arnau Gómez
             </h1>
             <div class="flex flex-wrap gap-3 mt-8">
                 {
