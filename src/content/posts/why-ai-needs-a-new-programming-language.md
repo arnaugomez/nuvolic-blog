@@ -9,7 +9,7 @@ image:
 tags: ["AI", "Programming languages", "Agents"]
 ---
 
-Engineers at Vercel built [Zero](https://zerolang.ai/), a systems programming language designed to help AI build more reliable low-level software: think compilers, HTTP proxies, CLIs...
+Engineers at Vercel built [Zero](https://zerolang.ai/), a systems programming language designed to help AI build more reliable low-level software: compilers, HTTP proxies, CLIs...
 
 While I was happy to hear the news, it shocked me to see how different Vercel's idea of "a programming language for AI" is to mine!
 
