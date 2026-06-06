@@ -9,7 +9,7 @@ image:
 tags: ["AI", "Programming languages", "Agents"]
 ---
 
-Engineers at Vercel built Zero, a systems programming language designed to help AI build more reliable low-level software: think compilers, HTTP proxies, CLIs...
+Engineers at Vercel built [Zero](https://zerolang.ai/), a systems programming language designed to help AI build more reliable low-level software: think compilers, HTTP proxies, CLIs...
 
 While I was happy to hear the news, it shocked me to see how different Vercel's idea of "a programming language for AI" is to mine!
 
@@ -120,7 +120,7 @@ Studies show that a model's performance decreases with the number of tools. An e
 
 ## The solution is code?
 
-It´s not a new idea: companies like Cloudflare and Anthropic have arrived to the same conclusion. Models are competent at writing code, so let´s allow them to write short programs that perform the tasks they'd otherwise do with tool calls.
+It´s not a new idea: companies like [Cloudflare](https://blog.cloudflare.com/code-mode/) and [Anthropic](https://www.anthropic.com/engineering/code-execution-with-mcp) have arrived to the same conclusion. Models are competent at writing code, so let´s allow them to write short programs that perform the tasks they'd otherwise do with tool calls.
 
 Crucially, the goal of this code is not to build software. It is not application code, built to be enjoyed by users. It is throwaway code. It´s a script that runs once, for one user, to perform a single task. It's code that no human will likely ever read.
 
@@ -141,7 +141,7 @@ There is a strong case for using bash, instead of inventing a new language. AI m
 
 However, bash feels like an intermediate state towards better tooling. Consistently, bash has been the go-to tool for OS administration. It is the gate to powerful commands that can edit thousands of documents in one go, but also nuke the file system and reveal sensitive information.
 
-Granular permissions and security are not a built-in feature of the runtime: instead, they have to be built on top. Bash assumes access to the file system and the OS, which requires virtualization. However, there are interesting projects like just-bash that allow developers to run bash commands in a secure, simulated environment that's built on top of the TypeScript runtime itself.
+Granular permissions and security are not a built-in feature of the runtime: instead, they have to be built on top. Bash assumes access to the file system and the OS, which requires virtualization. However, there are interesting projects like [just-bash](https://github.com/vercel-labs/just-bash) that allow developers to run bash commands in a secure, simulated environment that's built on top of the TypeScript runtime itself.
 
 Overall, I'm not sure what solution will prevail: either a new language, designed for AI, or bash. Both options come with challenges. But there are very good reasons to try. I wish at least one of these two solutions succeeds.
 
