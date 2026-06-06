@@ -20,13 +20,27 @@ const displayDate = frontmatter.pubDate.toLocaleDateString("en", {
             <em>{frontmatter.description}</em>
           </p>
         </div>
-        <Image
-          src={frontmatter.image.url}
-          alt={frontmatter.image.alt}
-          width={1280}
-          height={720}
-          class="object-cover object-center w-full aspect-12/7 rounded-md mt-4"
-        />
+        <div class="relative mt-4">
+          <Image
+            src={frontmatter.image.url}
+            alt={frontmatter.image.alt}
+            width={1280}
+            height={720}
+            class="object-cover object-center w-full aspect-12/7 rounded-md"
+          />
+          {
+            frontmatter.picture_attribution && (
+              <a
+                href={frontmatter.picture_attribution.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="absolute bottom-3 left-3 inline-flex items-center rounded-sm bg-white/80 px-2 py-1 text-[11px] font-medium text-base-700 shadow-sm ring-1 ring-black/5 hover:bg-white hover:text-base-900"
+              >
+                Picture by {frontmatter.picture_attribution.name}
+              </a>
+            )
+          }
+        </div>
         <div class="flex flex-col justify-between mt-4 md:flex-row gap-3">
           <p class="text-xs text-base-500">{displayDate} - Written by: {frontmatter.author}</p>
           <div class="flex gap-3">

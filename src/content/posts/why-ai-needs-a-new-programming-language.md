@@ -6,6 +6,9 @@ description: A programming language, but not for building software.
 image:
   url: "/src/images/blog/raymond-yeung-INC-L-tGLFY-unsplash.jpg"
   alt: "Traditional printing workshop in Taiwan"
+picture_attribution:
+  name: "Raymond Yeung"
+  link: "https://unsplash.com/photos/messy-desk-filled-with-books-plants-and-items-INC-L-tGLFY"
 tags: ["AI", "Programming languages", "Agents"]
 ---
 
@@ -16,6 +19,8 @@ While I was happy to hear the news, it shocked me to see how different Vercel's 
 I also think we desperately need a programming language for AI. "We" = the AI engineering community. The developers who build and deploy chatbots, AI assistants, data processing workflows, and all kinds of AI-enabled applications. AI in the wild.
 
 ## A programming language, but not for building software
+
+Let´s call this new programming language "Nuvo".
 
 Nuvo is a language that serves as the interface between AI agents and their environment.
 
@@ -154,7 +159,3 @@ We are accountable for our environment, too: AI data centers consume a large num
 Finally, the AI engineering community should not blindly accept the solutions that the labs give us (tools and MCPs). Instead, we shoud strive to innovate, and develop better solutions that move the industry forward.
 
 In the Middle Age, priests copied the Bible by hand. The invention of the press automated this process and caused a revolution in our culture. Nowadays, we've invented powerful AI models, but we're telling them to copy content by hand again. So we need a programming language for AI. Not to build software, but to change AI engineering forever.
-
----
-
-Beautiful [cover picture](https://unsplash.com/photos/messy-desk-filled-with-books-plants-and-items-INC-L-tGLFY) by Raymond Yeung
